@@ -18,13 +18,16 @@ Git
 
 Setup Instructions
 1. Clone the repository
+   
 git clone https://github.com/HasheemYodhin/kubespray-automation.git
-cd kubespray-automation
 
-2. Make the script executable
+cd kubespray
+
+3. Make the script executable
+   
 chmod +x kubespray.sh
 
-3. Run the script
+5. Run the script
 ./kubespray.sh
 
 Example Run
@@ -33,17 +36,17 @@ Kubespray Inventory Generator
 ==================================================
 
 [INFO] Enter Control Plane Node Details:
-Control Plane Public IP (ansible_host): 54.196.170.222
-Control Plane Private IP (ip/access_ip): 172.31.22.116
+Control Plane Public IP (ansible_host): 54.196.170.222   #public ip
+Control Plane Private IP (ip/access_ip): 172.31.22.116   #private ip
 
-How many worker nodes do you want? (0-10): 1
+How many worker nodes do you want? (0-10): 1  #Enter the no of nodes
 
 [INFO] Enter Worker Node 1 Details:
-Worker 1 Public IP (ansible_host): 13.218.169.173
-Worker 1 Private IP (ip/access_ip): 172.31.20.38
+Worker 1 Public IP (ansible_host): 13.218.169.173  #public ip
+Worker 1 Private IP (ip/access_ip): 172.31.20.38   #private ip
 
 Enter SSH user [ubuntu]: ubuntu
-Enter SSH private key path: /home/ubuntu/.ssh/lens.pem
+Enter SSH private key path: /home/ubuntu/.ssh/lens.pem    #give the path
 
 [INFO] Generating hosts.yaml...
 [INFO] Inventory file created: inventory/mycluster/hosts.yaml
@@ -58,21 +61,24 @@ Worker 1:
   Public IP: 13.218.169.173
   Private IP: 172.31.20.38
 
-SSH User: ubuntu
-SSH Key: /home/ubuntu/.ssh/lens.pem
+SSH User: ubuntu 
+SSH Key: /home/ubuntu/.ssh/lens.pem 
 
 [INFO] Creating deployment script...
 [INFO] Deployment script created: deploy-cluster.sh
 [INFO] To deploy the cluster, run: ./deploy-cluster.sh
 
-Deploy the Cluster
+#Deploy the Cluster
+
 ./deploy-cluster.sh
 
-Verify the cluster
+#Verify the cluster
+
 kubectl get nodes
+
 kubectl get pods -A
 
-Delete the Cluster
+#Delete the Cluster
 cd kubespray
 source venv/bin/activate
 

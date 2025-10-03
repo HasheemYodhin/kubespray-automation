@@ -38,7 +38,7 @@ Kubespray Inventory Generator
 ==================================================
 
 [INFO] Enter Control Plane Node Details:
-Control Plane Public IP (ansible_host): 54.196.170.222   #public ip
+Control Plane Public IP (ansible_host):   54.196.170.222   #public ip
 Control Plane Private IP (ip/access_ip): 172.31.22.116   #private ip
 
 How many worker nodes do you want? (0-10): 1  #Enter the no of nodes

@@ -19,16 +19,18 @@ Git
 Setup Instructions
 1. Clone the repository
    
-git clone https://github.com/HasheemYodhin/kubespray-automation.git
+       git clone https://github.com/HasheemYodhin/kubespray-automation.git
 
-cd kubespray
+       cd kubespray-automation
 
 3. Make the script executable
    
-chmod +x kubespray.sh
+       chmod +x kubespray.sh
 
 5. Run the script
-./kubespray.sh
+   
+       ./kubespray.sh
+   
 
 Example Run
 ==================================================
@@ -70,16 +72,18 @@ SSH Key: /home/ubuntu/.ssh/lens.pem
 
 #Deploy the Cluster
 
-./deploy-cluster.sh
+     ./deploy-cluster.sh
 
 #Verify the cluster
 
-kubectl get nodes
+     kubectl get nodes
 
-kubectl get pods -A
+     kubectl get pods -A
 
 #Delete the Cluster
-cd kubespray
-source venv/bin/activate
 
-ansible-playbook -i inventory/mycluster/hosts.yaml reset.yml -b -v
+       cd kubespray
+          
+     source venv/bin/activate
+
+    ansible-playbook -i inventory/mycluster/hosts.yaml reset.yml -b -v
